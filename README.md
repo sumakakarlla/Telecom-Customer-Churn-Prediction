@@ -128,6 +128,8 @@ A Yeo-Johnson transformation was applied to reduce skewness in the TotalCharges 
 ## 5. Outlier Analysis
 
 Outlier detection was performed on all numerical features.
+<img width="567" height="352" alt="image" src="https://github.com/user-attachments/assets/c91e74fc-adfe-4b60-aa7a-d7943d02a3b8" />
+
 
 ### Result
 
