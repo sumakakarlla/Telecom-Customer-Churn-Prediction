@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 
 # Load model and scaler
-with open("Credit_card_APP.pkl", "rb") as f:
+with open("Logistic_Regression_Model.pkl", "rb") as f:
     model = pickle.load(f)
 
 with open("standard_scaler.pkl", "rb") as f:
