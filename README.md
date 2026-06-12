@@ -342,7 +342,15 @@ This metric is more reliable than accuracy for imbalanced classification problem
 The final Logistic Regression model was used to predict customer churn on unseen test data.
 
 The model successfully identified customers at risk of churning and generated reliable predictions.
-<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/19690964-5a4d-4f1e-be3f-f3aee4e0e682" />
+
+### before Churn prediction 
+<img width="706" height="482" alt="image" src="https://github.com/user-attachments/assets/f7d964c5-6efa-4d59-8fd9-3e97d5340a11" />
+
+### After churn prediction 
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/82f33d6e-f58e-494a-9e46-94b6a152ea7b" />
+The Logistic Regression model correctly identified 312 churning customers and 738 non-churning customers. The model missed only 61 actual churners, indicating a strong recall for churn prediction. Although 298 non-churning customers were incorrectly classified as churners, the model demonstrates good effectiveness in identifying customers at risk of churning
+
 
 ---
 
