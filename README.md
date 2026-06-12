@@ -207,8 +207,6 @@ After encoding, numerical and categorical datasets were merged into a final mode
 
 # ⚖️ Data Balancing
 
-# ⚖️ Data Balancing
-
 The training dataset exhibited a significant class imbalance, which could lead to biased predictions toward the majority class.
 
 ### Class Distribution Before Balancing
