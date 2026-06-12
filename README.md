@@ -129,6 +129,10 @@ A Yeo-Johnson transformation was applied to reduce skewness in the TotalCharges 
 Outlier detection was performed on all numerical features.
 
 <img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/c4037442-f3d8-4d62-b9b6-866204d20b5f" />
+<img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/46b84bcb-c804-406a-80f4-3d7442592680" />
+<img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/baf2dd33-3096-4e45-86c8-2b78d77bb40f" />
+
+
 
 ### Result
 
@@ -143,6 +147,8 @@ Therefore, no outlier treatment was required.
 Statistical Hypothesis Testing was performed to identify important features.
 
 Features that were not statistically significant were removed from the dataset.
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/48cc4214-70c3-4dfd-b23a-c6724a340e2b" />
+
 
 ### Benefits
 
@@ -264,6 +270,8 @@ Each model was evaluated using:
 * ROC-AUC Score
 
 The ROC Curve was used as the primary metric for model selection because customer churn prediction is an imbalanced classification problem.
+<img width="650" height="400" alt="image" src="https://github.com/user-attachments/assets/f95c1abf-4b71-4603-bb9f-343634f6e9f4" />
+
 
 ---
 
@@ -336,6 +344,8 @@ A complete web application was developed for real-time churn prediction.
 * Real-time predictions
 * Customer churn risk assessment
 * Responsive design
+ <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/ec0671dc-641f-484f-be94-3e6b1b59c103" />
+ 
 
 ---
 
@@ -367,29 +377,7 @@ A complete web application was developed for real-time churn prediction.
 * Git
 * GitHub
 
----
 
-# 📸 Project Screenshots
-
-## Data Preprocessing
-
-(Add Screenshot Here)
-
-## Feature Engineering
-
-(Add Screenshot Here)
-
-## Model Comparison
-
-(Add Screenshot Here)
-
-## ROC Curve
-
-(Add Screenshot Here)
-
-## Web Application
-
-(Add Screenshot Here)
 
 ---
 
@@ -398,10 +386,6 @@ A complete web application was developed for real-time churn prediction.
 ### Render Deployment Link
 
 🔗 **Add Your Render URL Here**
-
----
-
-
 
 ---
 
