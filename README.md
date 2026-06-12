@@ -195,17 +195,42 @@ After encoding, numerical and categorical datasets were merged into a final mode
 
 # ⚖️ Data Balancing
 
-The training dataset contained class imbalance.
+# ⚖️ Data Balancing
+
+The training dataset exhibited a significant class imbalance, which could lead to biased predictions toward the majority class.
+
+### Class Distribution Before Balancing
+
+| Customer Type              | Count |
+| -------------------------- | ----- |
+| Good Customers (Churn = 1) | 1,496 |
+| Bad Customers (Churn = 0)  | 4,138 |
+
+The dataset was heavily skewed toward non-churn customers, making it difficult for machine learning models to learn churn patterns effectively.
 
 ### Technique Used
 
-Oversampling
+**Random Oversampling** was applied to the minority class in the training dataset.
 
-### Benefits
+### Class Distribution After Balancing
 
-* Balanced class distribution
-* Improved minority class prediction
-* Better churn detection performance
+| Customer Type              | Count |
+| -------------------------- | ----- |
+| Good Customers (Churn = 1) | 4,138 |
+| Bad Customers (Churn = 0)  | 4,138 |
+
+After oversampling, both classes contained an equal number of observations, resulting in a balanced training dataset.
+
+### Benefits of Data Balancing
+
+* Improved minority class representation
+* Reduced model bias toward the majority class
+* Enhanced churn detection capability
+* Improved Recall and ROC-AUC performance
+* Better generalization on unseen customer data
+
+Balancing the dataset helped the machine learning models learn customer churn patterns more effectively and improved overall predictive performance.
+
 
 ---
 
