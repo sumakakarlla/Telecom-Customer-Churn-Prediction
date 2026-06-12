@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Telecom Churn Prediction</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+        color: #e2e8f0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(15px);
+        border-radius: 18px;
+        padding: 30px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #38bdf8;
+        letter-spacing: 1px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+    }
+
+    label {
+        font-size: 12px;
+        color: #94a3b8;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(15, 23, 42, 0.7);
+        color: #e2e8f0;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus {
+        border-color: #38bdf8;
+        box-shadow: 0 0 0 2px rgba(56,189,248,0.2);
+    }
+
+    .btn {
+        margin-top: 25px;
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(90deg, #38bdf8, #2563eb);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(37,99,235,0.4);
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #34d399;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 13px;
+        color: #94a3b8;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<h1>📊 Telecom Customer Churn Prediction</h1>
+
+<form method="POST">
+
+<div class="grid">
+
+<!-- Gender -->
+<div>
+<label>gender_Male</label>
+<select name="gender_Male">
+    <option value="1">Male</option>
+    <option value="0">Female</option>
+</select>
+</div>
+
+<div>
+<label>tenure</label>
+<input type="number" name="tenure">
+</div>
+
+<div>
+<label>MonthlyCharges</label>
+<input type="number" name="MonthlyCharges">
+</div>
+
+<div>
+<label>TotalCharges_yeo</label>
+<input type="number" name="TotalCharges_yeo">
+</div>
+
+<!-- Paperless -->
+<div>
+<label>PaperlessBilling_Yes</label>
+<select name="PaperlessBilling_Yes">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<!-- Payment -->
+<div>
+<label>PaymentMethod_Credit card (automatic)</label>
+<select name="PaymentMethod_Credit card (automatic)">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>PaymentMethod_Electronic check</label>
+<select name="PaymentMethod_Electronic check">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>PaymentMethod_Mailed check</label>
+<select name="PaymentMethod_Mailed check">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<!-- SIMS -->
+<div>
+<label>sims_bsnl</label>
+<select name="sims_bsnl">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>sims_jio</label>
+<select name="sims_jio">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>sims_vodaphone</label>
+<select name="sims_vodaphone">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<!-- ORDINAL -->
+<div>
+<label>Partner_odinal</label>
+<select name="Partner_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>Dependents_odinal</label>
+<select name="Dependents_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>PhoneService_odinal</label>
+<select name="PhoneService_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>MultipleLines_odinal</label>
+<select name="MultipleLines_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>InternetService_odinal</label>
+<select name="InternetService_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>OnlineSecurity_odinal</label>
+<select name="OnlineSecurity_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>OnlineBackup_odinal</label>
+<select name="OnlineBackup_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>DeviceProtection_odinal</label>
+<select name="DeviceProtection_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>TechSupport_odinal</label>
+<select name="TechSupport_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>StreamingTV_odinal</label>
+<select name="StreamingTV_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>StreamingMovies_odinal</label>
+<select name="StreamingMovies_odinal">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+</select>
+</div>
+
+<div>
+<label>Contract_odinal</label>
+<select name="Contract_odinal">
+    <option value="0">Month-to-Month</option>
+    <option value="1">One Year</option>
+    <option value="2">Two Year</option>
+</select>
+</div>
+
+</div>
+
+<button class="btn" type="submit">Predict Churn</button>
+
+</form>
+
+{% if prediction %}
+<div class="result">
+Prediction: {{ prediction }}
+</div>
+{% endif %}
+
+</div>
+
+<footer>
+Python • Machine Learning Project
+</footer>
+
+</div>
+
+</body>
+</html>
