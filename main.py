@@ -249,7 +249,7 @@ class Customer_Retention_Prediction:
             with open("standard_scaler.pkl", "wb") as f:
                 pickle.dump(sc, f)
 
-            with open("Credit_card_APP.pkl", "wb") as f1:
+            with open("Logistic_Regression_Model.pkl", "wb") as f1:
                 pickle.dump(self.model, f1)
         except Exception as e:
             er_ty, er_msg, er_line = sys.exc_info()
