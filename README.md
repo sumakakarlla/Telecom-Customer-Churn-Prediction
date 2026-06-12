@@ -410,7 +410,7 @@ A complete web application was developed for real-time churn prediction.
 
 ### Render Deployment Link
 
-🔗 **Add Your Render URL Here**
+🔗 **https://telecom-customer-churn-prediction-xt9p.onrender.com**
 
 ---
 
