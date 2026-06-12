@@ -110,6 +110,15 @@ A Yeo-Johnson transformation was applied to reduce skewness in the TotalCharges 
 * MonthlyCharges
 * TotalCharges
 
+ TotalCharges was transformed using the Yeo-Johnson method to reduce positive skewness and improve distributional symmetry.
+ <img width="800" height="450" alt="Screenshot 2026-06-12 161914" src="https://github.com/user-attachments/assets/df64166e-3441-4fe4-8102-1c6d937adf94" />
+
+ tenure and MonthlyCharges did not exhibit significant skewness, and the transformation did not provide any meaningful improvement in their distributions. Therefore, these variables were retained in their original form.
+ <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/7a7f50fc-4a08-415b-bdcb-3d46f00890d0" />
+ <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/feaeb7f4-0496-408f-aac4-655ffdbf1296" />
+
+ Since SeniorCitizen is a binary feature (0 = No, 1 = Yes), most numerical transformation techniques are either inappropriate or provide no benefit:
+
 ### After Transformation
 
 * SeniorCitizen
@@ -117,7 +126,7 @@ A Yeo-Johnson transformation was applied to reduce skewness in the TotalCharges 
 * MonthlyCharges
 * TotalCharges_yeo
 
-### Benefits
+  ### Benefits
 
 * Reduced skewness
 * Improved feature distribution
@@ -188,6 +197,9 @@ Applied to:
 * StreamingTV
 * StreamingMovies
 * Contract
+
+* <img width="750" height="287" alt="image" src="https://github.com/user-attachments/assets/e35e461e-85d6-4fcd-81e9-2e3301af96e4" />
+
 
 After encoding, numerical and categorical datasets were merged into a final modeling dataset.
 
@@ -330,6 +342,7 @@ This metric is more reliable than accuracy for imbalanced classification problem
 The final Logistic Regression model was used to predict customer churn on unseen test data.
 
 The model successfully identified customers at risk of churning and generated reliable predictions.
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/19690964-5a4d-4f1e-be3f-f3aee4e0e682" />
 
 ---
 
