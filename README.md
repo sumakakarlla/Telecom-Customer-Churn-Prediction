@@ -254,6 +254,8 @@ Formula:
 
 z = (x − μ) / σ
 
+<img width="672" height="302" alt="image" src="https://github.com/user-attachments/assets/f369b9a1-92a1-41ba-8000-98d8b7784608" />
+
 ### Benefits
 
 * Standardized feature ranges
